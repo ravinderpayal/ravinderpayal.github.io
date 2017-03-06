@@ -5,11 +5,8 @@ author: ravinder_payal
 ---
 
 {% assign author = site.data.authors[page.author] %}
-
-<!-- Output author details if some exist. -->
 {% if author %}
     <span>
-        <!-- Personal Info. -->
         **Author** : <a href="{{ author.profile }}" target="_blank">@{{ author.name }}</a>
     </span>
 {% endif %}
