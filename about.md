@@ -16,4 +16,6 @@ I have developed a fully functional social networking service (http://www.funnen
 
 #### Mobile
 
-+91 8950427034, +91 7988486671
+[_^_]
+|mob|   +91 8950427034, +91 7988486671
+|<u>ile</u>|
