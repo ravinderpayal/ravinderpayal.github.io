@@ -3,13 +3,6 @@ layout: post
 title: Simple and Light Weight JavaScript Image Slider
 author: ravinder_payal
 ---
-
-{% assign author = site.data.authors[page.author] %}
-{% if author %}
-    <span>
-        **Author** : <a href="{{ author.profile }}" target="_blank">@{{ author.name }}</a>
-    </span>
-{% endif %}
 <p>
 Hi Guys, today, we are going to develop and a simple image-slider with the help of CSS and JavaScript (pure JavaScript). SOme of us will be thinking that why re-invent the wheel when libraries like JSSOR, and JQUERY carousel plugins are already available:-
 </p>
