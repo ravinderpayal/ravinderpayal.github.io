@@ -2,6 +2,7 @@
 layout: post
 title: Angular 2 Service for AJAX with Cache Management
 author: ravinder_payal
+page_id: blog1
 ---
 
 Author:Ravinder Payal 
