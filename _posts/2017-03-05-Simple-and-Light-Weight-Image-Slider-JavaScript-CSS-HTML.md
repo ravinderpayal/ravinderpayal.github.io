@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Simple and Light Weight JavaScript Image Slider
+author: ravinder_payal
 ---
 
 {% assign author = site.data.authors[page.author] %}
@@ -20,6 +21,7 @@ Hi Guys, today, we are going to develop and a simple image-slider with the help 
 3.	Light weight solutions, because the ready to use libraries have a lot of boiler plate code.
 4.	To have complete control over code.
 5.	Tell me if you know more.
+
 >Wait!! If you are using Angular 2, we have another article totally focused on Slider for Angular 2. First of all we will prepare our HTML structure.
 
 Slider.html
