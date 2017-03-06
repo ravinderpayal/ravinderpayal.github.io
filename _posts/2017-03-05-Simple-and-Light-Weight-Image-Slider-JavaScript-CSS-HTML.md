@@ -2,10 +2,19 @@
 layout: post
 title: Simple and Light Weight JavaScript Image Slider
 ---
-**Author**:@ravinderpayal 
 
-Hi Guys, today, we are going to develop and a simple image-slider with the help of CSS and JavaScript (pure JavaScript). Why to re-invent the wheel when libraries like JSSOR are already available:-
+{% assign author = site.data.authors[page.author] %}
 
+<!-- Output author details if some exist. -->
+{% if author %}
+    <span>
+        <!-- Personal Info. -->
+        **Author** : <a href="{{ author.profile }}" target="_blank">@{{ author.name }}</a>
+    </span>
+{% endif %}
+<p>
+Hi Guys, today, we are going to develop and a simple image-slider with the help of CSS and JavaScript (pure JavaScript). SOme of us will be thinking that why re-invent the wheel when libraries like JSSOR, and JQUERY carousel plugins are already available:-
+</p>
 1.	No worries about licensing.
 2.	To get a clear understanding of how slide shows and transitions work on web pages.
 3.	Light weight solutions, because the ready to use libraries have a lot of boiler plate code.
