@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Angular 2 Service for AJAX with Cache Management
+title: Simple and Light Weight JavaScript Image Slider
 ---
 **Author**:@ravinderpayal 
 
