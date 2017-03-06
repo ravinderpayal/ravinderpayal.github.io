@@ -10,10 +10,10 @@ I have developed a fully functional social networking service (http://www.funnen
 
 ### Contact me
 <hr />
-####Email
+###Email
 
 <a href="mailto:{{ site.email }}/">{{ site.email }}</a> and ravinderpayalspcl[at]gmail.com
 
-####Mobile
+###Mobile
 
 +91 8950427034, +91 7988486671
