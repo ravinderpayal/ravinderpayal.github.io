@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Simple and Light Weight JavaScript Image Slider
+title: Simple and Lightweight JavaScript Image Slider by Ravinder Payal
 author: ravinder_payal
 ---
 <p>
