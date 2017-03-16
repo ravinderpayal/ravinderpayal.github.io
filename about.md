@@ -15,7 +15,8 @@ I have developed a fully functional social networking service (http://www.funnen
 <a href="mailto:{{ site.email }}/">{{ site.email }}</a> and ravinderpayalspcl[at]gmail.com
 
 #### Mobile
-
+<pre>
 [_^_]
 |mob|   +91 8950427034, +91 7988486671
 |<u>ile</u>|
+</pre>
