@@ -12,7 +12,7 @@ A basic diagram of service using MVC architecture looks like this:-
 <img src="/blog-images/2017-03-20-01.png" />
  
 So, our first task is creating a layer which exposes our MVC to outside world. Here we go:-
-```
+```php
 <?php
 
 /*
@@ -73,7 +73,7 @@ else{
 
 In this block of code:- 
 
-```
+```php
 $path=array("","main","main");
 if(isset($_SERVER['PATH_INFO']) and preg_match('/[a-z 0-9~%.:_\-\/]+$/iu', $_SERVER['PATH_INFO'])) {
     if (!ctype_alnum(trim($_SERVER['PATH_INFO'], "/")) and !preg_match("[/]",$_SERVER['PATH_INFO'])) {
@@ -93,7 +93,7 @@ We are processing URL and [stripping of] information about controller name and i
 >Remember, the $_SERVER[‘PATH_INFO’] returns the after part of `index.php/` in URL.
 >We can use url rewrite to get rid of index.php in URL.
 
-```
+```php
 define("public_dir","public/");
 define("private_dir","private/");
 //isset($_GET["json"])? define("OUT_MODE","JSON_MODE"): define("OUT_MODE","GUI_MODE");
@@ -124,7 +124,7 @@ Here, $path[0] is blank as there is nothing useful before first “/” in URL, 
 
 
 Upto now, we have coded a router/public layer in PHP which exposes our controllers, but wait where are our controllers. Before we code our first controller class, we will have a look at `load.php` file.
-```
+```php
 //Load github code here, from tutorial branch of repo
 //this code for reference purpose only
 <?php
@@ -179,7 +179,7 @@ function out($a){
 
 Now, we come to a new file name config.php, which is very important to us as, very few naming is hard coded in our MVC, and all non-hardcoded strings are defined in config.php file.
 
-```
+```php
 <?php
 /**
  * 
@@ -237,7 +237,7 @@ Now, we will code our first controller.
 >From next part onwards we will see major changes in our controller, and additional functionalities.
 File location:- …/public/application/controllers/firstcont.php
 
-```
+```php
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
