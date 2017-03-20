@@ -1,6 +1,9 @@
-MVC (Model View Controller) in PHP part 1 by Ravinder Payal
-
-
+---
+layout: post
+title: MVC (Model View Controller) in PHP part 1 by Ravinder Payal
+author: ravinder_payal
+page_id: blog1
+---
 Hello friends, in this series we are going to create Model View Controller in PHP using classes and methods. For a large application, a model view controller is really helpful for code structuring, and separating data (model), output (view), and logics (controller) layers. Many times View and Controller layers are combined together when further processing of output provided by logic layer is not required, or require a single function call like `json_encode()`, as in case of APIs service where data is returned in the form of JSON or XML.
 Along with MVC there is also a router layer, on top of MVC layers, which decides which logic to be called, and in turn logics decides what to call and do.
 
