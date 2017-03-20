@@ -72,6 +72,7 @@ else{
 ```
 
 In this block of code:- 
+
 ```
 $path=array("","main","main");
 if(isset($_SERVER['PATH_INFO']) and preg_match('/[a-z 0-9~%.:_\-\/]+$/iu', $_SERVER['PATH_INFO'])) {
@@ -86,10 +87,12 @@ else{
     badReq(__FILE__." : ".__LINE__);
 }
 ```
+
 We are processing URL and [stripping of] information about controller name and its method’s name. In URL like http://www.example.com/index.php/hello/world, our router will consider “Hello” as controller name, and “World” as method name. Further sub directories are supplied as arguments/parameters to methods of controllers [(It will cause an error if more arguments are supplied than requested)]. Our regex expression `'/[a-z 0-9~%.:_\-\/]+$/iu'` separates all directory names (or strings separated by “/” or “\”) in URL, and return an 1 D Array containing separated strings. Now we will proceed to next block of code which, using strings, call contoller and it’s methods.
 
 >Remember, the $_SERVER[‘PATH_INFO’] returns the after part of `index.php/` in URL.
 >We can use url rewrite to get rid of index.php in URL.
+
 ```
 define("public_dir","public/");
 define("private_dir","private/");
@@ -172,9 +175,10 @@ function load($controller,$dependencies = array()){
 function out($a){
     echo "<pre>$a</pre></br>";
 }
-
 ```
+
 Now, we come to a new file name config.php, which is very important to us as, very few naming is hard coded in our MVC, and all non-hardcoded strings are defined in config.php file.
+
 ```
 <?php
 /**
@@ -225,13 +229,14 @@ class GlobalVar{
     static public $SG_session_account_level = array(1 => SESSION_ADMIN,2=>SESSION_SUBADMIN,3=>SESSION_PRIV_USER,4=>SESSION_USER );
 }
 require COREPATH."constants/OUT.php";
-
 ```
+
 This file is well commented and self explanatory. Period.
 
 Now, we will code our first controller.
 >From next part onwards we will see major changes in our controller, and additional functionalities.
 File location:- …/public/application/controllers/firstcont.php
+
 ```
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
@@ -249,7 +254,7 @@ class printcont{
 	//myLogic($a);
     }
 }
-
+```
 Download complete code used in this part of tutorial from Github tutorial branch oof SystemPHP repository.
 
 Comment your questions, and if you learned something, please give your 5 seconds and like our github repo for this tutorial series, and opensource version of complete SystemPHP (inspired from CodeIgniter®)
