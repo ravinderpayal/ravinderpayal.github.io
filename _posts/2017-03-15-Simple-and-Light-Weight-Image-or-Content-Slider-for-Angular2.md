@@ -4,13 +4,14 @@ title: Simple and Lightweight Angular 2 Image or Content Slider by Ravinder Paya
 author: ravinder_payal
 ---
 <p>
-Hi Guys, today, we are going to develop and a simple image-slider for Angular 2 with the help of CSS. SOme of us will be thinking that why re-invent the wheel when libraries like JSSOR, and JQUERY carousel plugins are already available:-
+Hi Guys, today, we are going to develop and a simple image-slider for Angular 2 with the help of CSS. Some of us will be thinking that why re-invent the wheel when libraries like JSSOR, and JQUERY carousel plugins are already available:-
 </p>
-1.	No worries about licensing.
-2.	To get a clear understanding of how slide shows and transitions work on web pages.
-3.	Light weight solutions, because the ready to use libraries have a lot of boiler plate code.
-4.	To have complete control over code.
-5.	Tell me if you know more.
+1.  Because there are no good native Angular 2 sliders available. Those available are too heavy, and have additional dependencies like JQUERY, which makes our project more heavy.
+2.	No worries about licensing.
+3.	To get a clear understanding of how slide shows and transitions work on web pages.
+4.	Light weight solutions, because the ready to use libraries have a lot of boiler plate code.
+5.	To have complete control over code.
+6.	Tell me if I missed any important plus or minus point.
 
 >Wait!! If you are using Angular 2, we have another article totally focused on Slider for Angular 2. First of all we will prepare our HTML structure.
 
