@@ -7,6 +7,8 @@ page_id: blog1
 Hello friends, in this series we are going to create Model View Controller in PHP using classes and methods. For a large application, a model view controller is really helpful for code structuring, and separating data (model), output (view), and logics (controller) layers. Many times View and Controller layers are combined together when further processing of output provided by logic layer is not required, or require a single function call like [`json_encode()`](http://php.net/manual/en/function.json-encode.php), as in case of APIs service where data is returned in the form of JSON or XML.
 Along with MVC there is also a router layer, on top of MVC layers, which decides which logic to be called, and in turn logics decides what to call and do.
 
+>Download complete code used in this part of tutorial from [Github tutorial branch of SystemPHP repository](https://github.com/ravinderpayal/systemPHP/tree/tutorialPart1).
+
 A basic diagram of service using MVC architecture looks like this:-
 	
 ![Diagram showing flow of data in MVC structure](/blog-images/2017-03-20-01.png)
@@ -139,8 +141,6 @@ Here, $path[0] is blank as there is nothing useful before first “/” in URL, 
 
 Upto now, we have coded a router/public layer in PHP which exposes our controllers, but wait where are our controllers. Before we code our first controller class, we will have a look at `load.php` file.
 ```php
-//Load github code here, from tutorial branch of repo
-//this code for reference purpose only
 <?php
 /*
  * 
@@ -269,7 +269,7 @@ class printcont{
     }
 }
 ```
-Download complete code used in this part of tutorial from [Github tutorial branch of SystemPHP repository](https://github.com/ravinderpayal/systemPHP/tree/tutorialPart1).
+>Download complete code used in this part of tutorial from [Github tutorial branch of SystemPHP repository](https://github.com/ravinderpayal/systemPHP/tree/tutorialPart1).
 
 Comment your questions, and if you learned something, please give your 5 seconds and like our github repo for this tutorial series, and opensource version of complete SystemPHP (inspired from CodeIgniter®)
 >Youtube video series coming soon.
