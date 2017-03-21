@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Simple and Lightweight Angular 2 Image or Content Slider by Ravinder Payal
+title: Simple and Lightweight Image or Content Slider for Angular 2 by Ravinder Payal
 author: ravinder_payal
 ---
 <p>
@@ -12,6 +12,9 @@ Hi Guys, today, we are going to develop and a simple image-slider for Angular 2 
 4.	Light weight solutions, because the ready to use libraries have a lot of boiler plate code.
 5.	To have complete control over code.
 6.	Tell me if I missed any important plus or minus point.
+
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider/archive/master.zip" data-icon="octicon-cloud-download" data-style="mega" aria-label="Download ravinderpayal/Angular2-Image-OR-Content-Slider on GitHub">Download</a>
 
 If you agree, let's go ahead.
 
@@ -375,3 +378,25 @@ SlideShow1 is for backward animation of appearing image. Similarly, SlideShow2 a
 }
 ```
 It’s the use of key frames. One thing worth noting is that we are using forwards property of animation-fill-mode ( animation-fill-mode: forwards;) and cubic-bezier is used for defining the curve which the timing function of animation will follow. Note: - Chrome has a good graphical tool for defining curve, and shows a live demo of animation with defined curve. Just click on the curve sign appearing before curve function in CSS tab in developer tools.
+
+###Basic Usage
+
+```typescript
+    @Component({
+        selector: 'ImageShow',
+        template: `
+        <contentSlider [slides]="images"></contentSlider>
+        `
+    })
+    export class ImageShowComponent implements  AfterViewInit{
+       images:Array<any> = [{"sType":"img","imgSrc":"..."},{"sType":"div","content":"...Hello It's slidable content"}];
+      constructor(){
+      }
+    }
+```
+Download the complete source code from (github repository)[https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider].
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider/archive/master.zip" data-icon="octicon-cloud-download" data-style="mega" aria-label="Download ravinderpayal/Angular2-Image-OR-Content-Slider on GitHub">Download</a>
+Thanks Friends for reading to end. If you liked the post please share it, and star our project's (github repository)[https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider]
