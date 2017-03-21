@@ -14,13 +14,14 @@ Hi Guys, today, we are going to develop and a simple image-slider for Angular 2 
 6.	Tell me if I missed any important plus or minus point.
 
 <!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider/archive/master.zip" data-icon="octicon-cloud-download" data-style="mega" aria-label="Download ravinderpayal/Angular2-Image-OR-Content-Slider on GitHub">Download</a>
+<a class="github-button" href="https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider/archive/master.zip" data-icon="octicon-cloud-download" data-style="mega" aria-label="Download ravinderpayal/Angular2-Image-OR-Content-Slider on GitHub">Download</a> <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider" data-icon="octicon-star" data-style="mega" data-count-href="/ravinderpayal/Angular2-Image-OR-Content-Slider/stargazers" data-count-api="/repos/ravinderpayal/Angular2-Image-OR-Content-Slider#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star ravinderpayal/Angular2-Image-OR-Content-Slider on GitHub">Star</a>
 
 If you agree, let's go ahead.
 
 First of all we will prepare our HTML structure.
 
-###Template
+### Template
 ```html
 <div class="slider">
   <div class="sliderArrows">
@@ -37,7 +38,7 @@ First of all we will prepare our HTML structure.
 In our template we have a root div element, with class "slider", for holding our slider and controlling height and width of our slider. Next is `div.sliderArrows` which contains arrows for sliding our images righ or left, and consumes flex layout for correctly spacing arrows on x-axis.
 Last is `ul.slideShow` which contains our slides for sliding left or right.We uses `*ngFor` directive for adding our slides in dom. This also gives the dynamic behaviour to slider, as we can change our array, containing images, dynamically. Removing a slide from slideshow is as simple as removing the index/element containing detail of slide from array. We are using a custom element/component named printSlide for adding aditional features and keeping our template code yet simple.
 
-###Let's have a look at printSlide component.
+### Let's have a look at printSlide component.
 
 ```typescript
 @Component({
@@ -58,7 +59,7 @@ export class printSlide{
 ```
 Here, it's clearly visible the use of printSlide component. It allows us to show a wide range of content for sliding, without making the main componet complex. We can add more features in printSlide component like Ajax DIV or LazyLoading of Images or Youtube Videos.
 
-###Now come to the actual component we have made.
+### Now come to the actual component we have made.
 ```typescript
 import { Component, ElementRef, Renderer, Input, Output, Optional, EventEmitter, ViewEncapsulation } from '@angular/core';
 
@@ -188,7 +189,7 @@ We are defining classes for our slides in their array itself with property named
 
 Now we will move to designing and correctly structuring our slider
 
-Required CSS code for our Content
+### Required CSS code for our Content
 ```css
 /*---------------------------Image Slider--------------------------*/
 #slider{
@@ -379,7 +380,7 @@ SlideShow1 is for backward animation of appearing image. Similarly, SlideShow2 a
 ```
 It’s the use of key frames. One thing worth noting is that we are using forwards property of animation-fill-mode ( animation-fill-mode: forwards;) and cubic-bezier is used for defining the curve which the timing function of animation will follow. Note: - Chrome has a good graphical tool for defining curve, and shows a live demo of animation with defined curve. Just click on the curve sign appearing before curve function in CSS tab in developer tools.
 
-###Basic Usage
+### Basic Usage
 
 ```typescript
     @Component({
@@ -394,9 +395,10 @@ It’s the use of key frames. One thing worth noting is that we are using forwar
       }
     }
 ```
-Download the complete source code from (github repository)[https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider].
+Download the complete source code from [github repository](https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider).
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider/archive/master.zip" data-icon="octicon-cloud-download" data-style="mega" aria-label="Download ravinderpayal/Angular2-Image-OR-Content-Slider on GitHub">Download</a>
-Thanks Friends for reading to end. If you liked the post please share it, and star our project's (github repository)[https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider]
+<a class="github-button" href="https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider/archive/master.zip" data-icon="octicon-cloud-download" data-style="mega" aria-label="Download ravinderpayal/Angular2-Image-OR-Content-Slider on GitHub">Download</a>&nbsp;<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider" data-icon="octicon-star" data-style="mega" data-count-href="/ravinderpayal/Angular2-Image-OR-Content-Slider/stargazers" data-count-api="/repos/ravinderpayal/Angular2-Image-OR-Content-Slider#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star ravinderpayal/Angular2-Image-OR-Content-Slider on GitHub">Star</a>
+Thanks Friends for reading to end. If you liked the post please share it, and star our project's [github repository](https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider)
