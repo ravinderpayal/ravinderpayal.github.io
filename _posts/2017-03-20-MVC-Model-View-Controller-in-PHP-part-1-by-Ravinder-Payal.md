@@ -245,11 +245,9 @@ class GlobalVar{
 require COREPATH."constants/OUT.php";
 ```
 
-This file is well commented and self explanatory. Period.
+This file is well commented and self explanatory. So, I will not explain this one. Period.
 
 Now, we will code our first controller.
->From next part onwards we will see major changes in our controller, and additional functionalities.
-File location:- …/public/application/controllers/firstcont.php
 
 ```php
 <?php
@@ -269,6 +267,75 @@ class printcont{
     }
 }
 ```
+>From next part onwards we will see major changes in our controller, and additional functionalities.
+File location:- …/public/application/controllers/firstcont.php
+
+Hmm, a MVC withoud a model is incomplete, so let's make a model and use that in our controller.
+
+```php
+<?php
+defined("BASEPATH") or exit("not for you");
+
+class TestModel extends Model{
+
+    public function deleteTest($post_id,$user_id){
+
+    }
+
+    public function isTestByUser($post_id,$user_id){
+            $this->db->select();
+    }
+
+    /**
+     * 
+     * Function for getting a single Post with <b>Post ID</b> as key
+     * @param String $pid String Contening <b>Post ID</b>
+     *  
+     */
+    public function getTest($pid){
+    //we are emulating the SQL query for now. We will inroduce our powerfull SQL query builder library in upcoming part of tutoria.
+        $result = array();//$this->sql->select("doc_id,doc_title")->from("documents")->where(array("doc_id"=>$pid))->result();
+        return $result;
+    }
+
+    /**
+     * Function for adding test
+     * @param Array $t Contains meta data of test
+     */
+    public function add($t){
+        return true;//$this->sql->insertInto("test")->values($t)->exec();
+    }
+  }
+```
+We have model ready, but how to use this? Let's use it. We wil load our model in controller, and use it's methods.
+```php
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class printcont{
+    function __construct(){
+    require BASEPATH.APPPATH."models/testmodel.php";
+    $this->testModel = new TestModel();
+    }
+    public function main(){
+        echo "{\"success\":true}";
+    }
+    public function somemethod($a,$b,$c=”optional”){
+	echo $a,$b,$c;
+    }
+    public function anothermethod($a=”optional”){
+	//myLogic($a);
+    }
+    public playwithModel(){
+	$success = $this->testmodel->add(array());
+        echo "{\"success\":$success}";
+    }
+}
+```
+>Note, we have loaded our controller directly just for making this tutorial simple and easy to learn. In upcoming parts, we will define a function for loading models, and make our all classes singleton.
+
+
+
 >Download complete code used in this part of tutorial from [Github tutorial branch of SystemPHP repository](https://github.com/ravinderpayal/systemPHP/tree/tutorialPart1).
 
 Comment your questions, and if you learned something, please give your 5 seconds and like our github repo for this tutorial series, and opensource version of complete SystemPHP (inspired from CodeIgniter®)
