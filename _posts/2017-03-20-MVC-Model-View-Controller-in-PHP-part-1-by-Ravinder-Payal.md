@@ -10,6 +10,17 @@ Along with MVC there is also a router layer, on top of MVC layers, which decides
 A basic diagram of service using MVC architecture looks like this:-
 	
 ![Diagram showing flow of data in MVC structure](/blog-images/2017-03-20-01.png)
+
+Our working directory structure for this part of tutorial.
+```
+├── private
+|   └──application
+|      ├── controllers
+|      ├── models
+|      └── views
+└── index.php
+```
+
  
 So, our first task is creating a layer which exposes our MVC to outside world. Here we go:-
 ```php
