@@ -4,7 +4,7 @@ title: MVC (Model View Controller) in PHP part 1 by Ravinder Payal
 author: ravinder_payal
 page_id: blog1
 ---
-Hello friends, in this series we are going to create Model View Controller in PHP using classes and methods. For a large application, a model view controller is really helpful for code structuring, and separating data (model), output (view), and logics (controller) layers. Many times View and Controller layers are combined together when further processing of output provided by logic layer is not required, or require a single function call like `json_encode()`, as in case of APIs service where data is returned in the form of JSON or XML.
+Hello friends, in this series we are going to create Model View Controller in PHP using classes and methods. For a large application, a model view controller is really helpful for code structuring, and separating data (model), output (view), and logics (controller) layers. Many times View and Controller layers are combined together when further processing of output provided by logic layer is not required, or require a single function call like (`json_encode()`)[http://php.net/manual/en/function.json-encode.php], as in case of APIs service where data is returned in the form of JSON or XML.
 Along with MVC there is also a router layer, on top of MVC layers, which decides which logic to be called, and in turn logics decides what to call and do.
 
 A basic diagram of service using MVC architecture looks like this:-
@@ -90,7 +90,7 @@ else{
 
 We are processing URL and [stripping of] information about controller name and its method’s name. In URL like http://www.example.com/index.php/hello/world, our router will consider “Hello” as controller name, and “World” as method name. Further sub directories are supplied as arguments/parameters to methods of controllers [(It will cause an error if more arguments are supplied than requested)]. Our regex expression `'/[a-z 0-9~%.:_\-\/]+$/iu'` separates all directory names (or strings separated by “/” or “\”) in URL, and return an 1 D Array containing separated strings. Now we will proceed to next block of code which, using strings, call contoller and it’s methods.
 
->Remember, the $_SERVER[‘PATH_INFO’] returns the after part of `index.php/` in URL.
+>Remember, the ($_SERVER[‘PATH_INFO’])[http://php.net/manual/en/reserved.variables.server.php] returns the after part of `index.php/` in URL.
 >We can use url rewrite to get rid of index.php in URL.
 
 ```php
@@ -116,8 +116,8 @@ else{
 ```
 Here, $path[0] is blank as there is nothing useful before first “/” in URL, and $path[1] contains name of controller class, and $path[2] contains name of method. Our first layer proceeds further after checking if method name is supplied or not. In case not supplied, it will call `main` method of controller class. It can be inferenced that method with name `main` (or you name it) is required in our MVC. If method name is supplied, it extacts array of arguments from our `$path` array containing strings containing all parts of url (after index.php) separated by “/” or “\”. Here we are using a function named “load” defined in another file named (“load.php”)[LINK]. In load function we are having some logics which loads file containing class and return the instantiated class. After loading the desired controller, we check if there is method with the supplied name exists or not. If not, we will call a function which shows a `HTTP/1.1 404` error.
 >It can be inferenced that method with name `main` (or you name it) is required in our MVC.
->    `array_slice($path, 3)` returns all elements of array, after slicing off first 3 elements.
->`method_exists` check if a class have a method with supplied name or not.
+>(`array_slice($path, 3)`)[http://php.net/manual/en/function.array-slice.php] returns all elements of array, after slicing off first 3 elements.
+>(`method_exists`)[http://php.net/manual/en/function.method-exists.php] check if a class have a method with supplied name or not.
 
 >There are two native functions in PHP named call_user_func_array and call_user_func, but we are using call_user_func_array as it allows calling a method of class with an array of N-number of arguments.
 >call_user_func is used for calling functions.(see php.net)
@@ -255,7 +255,7 @@ class printcont{
     }
 }
 ```
-Download complete code used in this part of tutorial from Github tutorial branch oof SystemPHP repository.
+Download complete code used in this part of tutorial from (Github tutorial branch of SystemPHP repository)[https://github.com/ravinderpayal/systemPHP/tree/tutorialPart1].
 
 Comment your questions, and if you learned something, please give your 5 seconds and like our github repo for this tutorial series, and opensource version of complete SystemPHP (inspired from CodeIgniter®)
 >Youtube video series coming soon.
