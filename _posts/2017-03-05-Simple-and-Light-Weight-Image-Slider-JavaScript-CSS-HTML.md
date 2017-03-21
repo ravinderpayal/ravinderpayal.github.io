@@ -12,9 +12,11 @@ Hi Guys, today, we are going to develop and a simple image-slider with the help 
 4.	To have complete control over code.
 5.	Tell me if you know more.
 
->Wait!! If you are using Angular 2, we have another article totally focused on Slider for Angular 2. First of all we will prepare our HTML structure.
+>(Wait!! If you are using Angular 2, we have another article totally focused on Angular 2.)[http://www.ravinderpayal.com/Simple-and-Light-Weight-Image-or-Content-Slider-for-Angular2/]
 
-Slider.html
+First of all we will prepare our HTML structure.
+
+###HTML
 ```html
 <div id="slider">
 <div class="sliderArrows">
