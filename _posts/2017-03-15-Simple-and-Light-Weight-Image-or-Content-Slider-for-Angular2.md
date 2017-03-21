@@ -13,14 +13,16 @@ Hi Guys, today, we are going to develop and a simple image-slider for Angular 2 
 5.	To have complete control over code.
 6.	Tell me if I missed any important plus or minus point.
 
->Wait!! If you are using Angular 2, we have another article totally focused on Slider for Angular 2. First of all we will prepare our HTML structure.
+If you agree, let's go ahead.
 
-Template
+First of all we will prepare our HTML structure.
+
+###Template
 ```html
 <div class="slider">
   <div class="sliderArrows">
-    <a (click)="backWard()"><</a>
-    <a (click)="forWard()">></a>
+    <a (click)="backWard()">&lt;<!--Use icons of your choice, although these simple Lower than and greater signs also looks well--></a>
+    <a (click)="forWard()">&gt;</a>
   </div>
   <ul class="slideShow">
     <li *ngFor="let li of slides" [ngClass]="li?.classes">
@@ -31,6 +33,7 @@ Template
 ```
 In our template we have a root div element, with class "slider", for holding our slider and controlling height and width of our slider. Next is `div.sliderArrows` which contains arrows for sliding our images righ or left, and consumes flex layout for correctly spacing arrows on x-axis.
 Last is `ul.slideShow` which contains our slides for sliding left or right.We uses `*ngFor` directive for adding our slides in dom. This also gives the dynamic behaviour to slider, as we can change our array, containing images, dynamically. Removing a slide from slideshow is as simple as removing the index/element containing detail of slide from array. We are using a custom element/component named printSlide for adding aditional features and keeping our template code yet simple.
+
 ###Let's have a look at printSlide component.
 
 ```typescript
