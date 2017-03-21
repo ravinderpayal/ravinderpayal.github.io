@@ -12,11 +12,11 @@ Hi Guys, today, we are going to develop and a simple image-slider with the help 
 4.	To have complete control over code.
 5.	Tell me if you know more.
 
->(Wait!! If you are using Angular 2, we have another article totally focused on Angular 2.)[http://www.ravinderpayal.com/Simple-and-Light-Weight-Image-or-Content-Slider-for-Angular2/]
+>[Wait!! If you are using Angular 2, we have another article totally focused on Angular 2.](http://www.ravinderpayal.com/Simple-and-Light-Weight-Image-or-Content-Slider-for-Angular2/)
 
 First of all we will prepare our HTML structure.
 
-###HTML
+### HTML
 ```html
 <div id="slider">
 <div class="sliderArrows">
@@ -32,7 +32,7 @@ First of all we will prepare our HTML structure.
 ```
 Now, as we can see our HTML code is self explanatory. We can add any number of images in Unordered List(UL.slideShow) with IMG tag. The divider tag(DIV.sliderArrows) contains the forward and backward arrows. Right now we have used greater than and lower than signs, but any icon or sign can be used. Now come to the CSS part. First look at the whole CSS file before break it apart.
 
-124 lines of CSS code
+### CSS
 ```css
 /*---------------------------Image Slider--------------------------*/
 #slider{
@@ -182,6 +182,7 @@ First key frame is `SlideShow0`:-
 }
 ```
 This frame is used for animating the appearing image/element (In case of non image slide-shows). It first translates/moves the image to 1000px right side from its current position, and then it brings back to its current position which gives image sliding effect (you name it better). Along with position transition, it also gives an opacity transition. Opacity and Visibility can be used interchangeably.
+
 ```css
 @keyframes slideShow1{
     0%{
@@ -197,7 +198,9 @@ This frame is used for animating the appearing image/element (In case of non ima
 
 }
 ```
+
 SlideShow1 is for backward animation of appearing image. Similarly, SlideShow2 and 3 are for backward and forward animation of disappearing images.
+
 ```css
 #slider ul li.active{
     display: inline-block;
@@ -221,10 +224,11 @@ SlideShow1 is for backward animation of appearing image. Similarly, SlideShow2 a
     animation-delay: 0.1s;
 }
 ```
+
 It’s the use of key frames. One thing worth noting is that we are using forwards property of animation-fill-mode ( animation-fill-mode: forwards;) and cubic-bezier is used for defining the curve which the timing function of animation will follow. Note: - Chrome has a good graphical tool for defining curve, and shows a live demo of animation with defined curve. Just click on the curve sign appearing before curve function in CSS tab in developer tools.
 Let’s move on to JAVASCRIPT code.
 
-JavaScript
+### JavaScript
 ```javascript
 class Slider{
     constructor(){
