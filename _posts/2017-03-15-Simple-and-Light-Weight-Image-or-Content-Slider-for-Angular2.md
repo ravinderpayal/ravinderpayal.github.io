@@ -44,7 +44,7 @@ Last is `ul.slideShow` which contains our slides for sliding left or right.We us
 @Component({
     selector:"printSlide",
     template:`
-        <div *ngIf="meta.sType=='div'" innerHtml="meta.content">
+        <div *ngIf="meta.sType=='div'" [innerHtml]="meta.content">
 
         </div>
         <img [src]="meta.imgSrc" *ngIf="meta.sType=='img'" />
@@ -192,7 +192,7 @@ Now we will move to designing and correctly structuring our slider
 ### Required CSS code for our Content
 ```css
 /*---------------------------Image Slider--------------------------*/
-#slider{
+.slider{
     height:400px;
     width:100%;
     font-size: 500%;
@@ -202,47 +202,47 @@ Now we will move to designing and correctly structuring our slider
     position: relative;
 }
 
-#slider ul{
+.slider ul{
     display: flex;
     padding: 0;
     justify-content: center;
     margin: 0;
 }
-#slider ul li {
+.slider ul li {
     list-style: none;
     width: 100%;
     display: none;
     /*transition: cubic-bezier(0.6, -0.61, 0, 1.34) all 0.7s;*/
 }
-#slider ul li img{
+.slider ul li img{
     max-width:100%;
     min-width:100%;
     height: 100%;
     display: block;
 }
 
-#slider ul li.active{
+.slider ul li.active{
     display: inline-block;
 }
-#slider ul li.backward{
+.slider ul li.backward{
     animation: slideShow0 1.2s cubic-bezier(0.6, -0.61, 0, 1.34);
 }
-#slider ul li.forward{
+.slider ul li.forward{
     animation: slideShow1 1.2s cubic-bezier(0.6, -0.61, 0, 1.34);
 }
-#slider ul li.animateBack{
+.slider ul li.animateBack{
     display: inline-block;
     position: absolute;
     animation: slideShow2 1s cubic-bezier(0.38,-0.74, 0, 1.29) forwards;
     animation-delay: 0.1s;
 }
-#slider ul li.animateForward{
+.slider ul li.animateForward{
     display: inline-block;
     position: absolute;
     animation: slideShow3 1s cubic-bezier(0.38,-0.74, 0, 1.29)  forwards;
     animation-delay: 0.1s;
 }
-#slider .sliderArrows{
+.slider .sliderArrows{
     display:flex;
     position: absolute;
     flex-flow:row wrap;
@@ -252,7 +252,7 @@ Now we will move to designing and correctly structuring our slider
     height: 100%;
     z-index: 101;
 }
-#slider .sliderArrows a{
+.slider .sliderArrows a{
     cursor:pointer;
     font-weight: 900;
 }
@@ -356,22 +356,22 @@ This frame is used for animating the appearing image/element (In case of non ima
 ```
 SlideShow1 is for backward animation of appearing image. Similarly, SlideShow2 and 3 are for backward and forward animation of disappearing images.
 ```css
-#slider ul li.active{
+.slider ul li.active{
     display: inline-block;
 }
-#slider ul li.backward{
+.slider ul li.backward{
     animation: slideShow0 1.2s cubic-bezier(0.6, -0.61, 0, 1.34);
 }
-#slider ul li.forward{
+.slider ul li.forward{
     animation: slideShow1 1.2s cubic-bezier(0.6, -0.61, 0, 1.34);
 }
-#slider ul li.animateBack{
+.slider ul li.animateBack{
     display: inline-block;
     position: absolute;
     animation: slideShow2 1s cubic-bezier(0.38,-0.74, 0, 1.29) forwards;
     animation-delay: 0.1s;
 }
-#slider ul li.animateForward{
+.slider ul li.animateForward{
     display: inline-block;
     position: absolute;
     animation: slideShow3 1s cubic-bezier(0.38,-0.74, 0, 1.29)  forwards;
