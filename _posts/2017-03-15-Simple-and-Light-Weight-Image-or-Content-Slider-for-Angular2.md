@@ -40,11 +40,22 @@ Last is `ul.slideShow` which contains our slides for sliding left or right.We us
 
 ### Let's have a look at printSlide component.
 
+*safeHtml pipe is added for preventing the style attributes( applied by you) from getting removed by Angular2 XSS security libraries*
+[Read more here https://angular.io/guide/security](https://angular.io/guide/security)
 ```typescript
+import { DomSanitizer } from '@angular/platform-browser'
+
+@Pipe({ name: 'safeHtml'})
+export class SafeHtmlPipe implements PipeTransform  {
+  constructor(private sanitized: DomSanitizer) {}
+  transform(value) {
+    return this.sanitized.bypassSecurityTrustHtml(value);
+  }
+}
 @Component({
     selector:"printSlide",
     template:`
-        <div *ngIf="meta.sType=='div'" [innerHtml]="meta.content">
+        <div *ngIf="meta.sType=='div'" [innerHtml]="meta.content | safeHtml">
 
         </div>
         <img [src]="meta.imgSrc" *ngIf="meta.sType=='img'" />
