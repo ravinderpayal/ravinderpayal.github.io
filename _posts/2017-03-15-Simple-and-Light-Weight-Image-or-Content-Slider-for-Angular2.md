@@ -18,7 +18,16 @@ Hi Guys, today, we are going to develop and a simple image-slider for Angular 2 
 <a class="github-button" href="https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider" data-icon="octicon-star" data-style="mega" data-count-href="/ravinderpayal/Angular2-Image-OR-Content-Slider/stargazers" data-count-api="/repos/ravinderpayal/Angular2-Image-OR-Content-Slider#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star ravinderpayal/Angular2-Image-OR-Content-Slider on GitHub">Star</a>
 
 If you agree, let's go ahead.
-
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-3201220427379470"
+     data-ad-slot="2921542940"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 First of all we will prepare our HTML structure.
 
 ### Template
@@ -71,7 +80,16 @@ export class printSlide{
 }
 ```
 Here, it's clearly visible the use of printSlide component. It allows us to show a wide range of content for sliding, without making the main componet complex. We can add more features in printSlide component like Ajax DIV or LazyLoading of Images or Youtube Videos.
-
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-3201220427379470"
+     data-ad-slot="2921542940"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 ### Now come to the actual component we have made.
 ```typescript
 import { Component, ElementRef, Renderer, Input, Output, Optional, EventEmitter, ViewEncapsulation } from '@angular/core';
@@ -199,8 +217,17 @@ export class contentSlider {
 
 The component is really very simple. It has three main methods named as auto, _forWard and backWard. With one more method (forWard ) as a wrapper of forWard function for exposing it to arrows in tempelate. We need not a _backWard and it's wrapper because, we are not going to call backWard function from `setInterval` defined in `auto` method of component. When moving slides with arrows we need to reset the interval so that it doesn't mess up with manual event. The method auto is for setting ‘keep playing’ mode slider ON.
 We are defining classes for our slides in their array itself with property named classes like this `this.slides[this.currentElement].classes = {"active":true,"forward":true}`. On slides/li elements, we are using [`*ngClasses`](https://angular.io/docs/ts/latest/api/common/index/NgClass-directive.html) directive. Let's assume an interval started at 12:00:00 AM, and user clicked for next slide at 12:00:01. In this case the next slide will be only visible for 1 sec instead of 2 sec(default setting), if the interval is not cleared just after the click event. I hope it's clear, why we used _forWard and forWard.
-
-Now we will move to designing and correctly structuring our slider
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-3201220427379470"
+     data-ad-slot="2921542940"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+Now, we will move to designing and correctly structuring of our slider.
 
 ### Required CSS code for our Content
 ```css
@@ -395,8 +422,20 @@ SlideShow1 is for backward animation of appearing image. Similarly, SlideShow2 a
     animation-delay: 0.1s;
 }
 ```
-It’s the use of key frames. One thing worth noting is that we are using forwards property of animation-fill-mode ( animation-fill-mode: forwards;) and cubic-bezier is used for defining the curve which the timing function of animation will follow. Note: - Chrome has a good graphical tool for defining curve, and shows a live demo of animation with defined curve. Just click on the curve sign appearing before curve function in CSS tab in developer tools.
+It’s the use of key frames. One thing worth noting is that we are using forwards property of animation-fill-mode ( animation-fill-mode: forwards;) and cubic-bezier is used for defining the curve which the timing function of animation will follow.
 
+>Note: - Chrome has a good graphical tool for defining curve, and shows a live demo of animation with defined curve. Just click on the curve sign appearing before curve function in CSS tab in developer tools.
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-3201220427379470"
+     data-ad-slot="2921542940"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 ### Basic Usage
 
 ```typescript
