@@ -365,6 +365,16 @@ One thing important in this code is that we have used flex-box property for arro
 
 >We can add any number of different transitions, but showing different types of transition effects is not the objective of this tutorial, and we will be doing to a separate tutorial for that. But, you can suggest some good slide show transistions, which we may try together to create.
 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-format="fluid"
+     data-ad-layout="in-article"
+     data-ad-client="ca-pub-3201220427379470"
+     data-ad-slot="2921542940"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 ### Let’s know about the key frames we are using here.
 
 First key frame is `SlideShow0`:-
