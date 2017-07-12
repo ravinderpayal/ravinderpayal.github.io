@@ -334,7 +334,11 @@ Now we will move to designing and correctly structuring our slider
 }
 /*---------------------------Image Slider Ends----------------------------*/
 ```
-One thing important in this code is that we have used flex-box property for arrow container, which makes our arrows responsive and align vertically and horizontally at exactly right places. Second thing is that we have defined animation key frames for 4 types of transitions we will be adding to our Slider. Note: - We can add any number of different transitions, but showing different types of transition effects is not in the aim of this tutorial, and we will be doing to a separate tutorial for that. Let’s define our key frames.
+One thing important in this code is that we have used flex-box property for arrow container, which makes our arrows responsive and align vertically and horizontally at exactly right places. Second thing is that we have defined animation key frames for 4 types of transitions we will be adding to our Slider. 
+
+>We can add any number of different transitions, but showing different types of transition effects is not the objective of this tutorial, and we will be doing to a separate tutorial for that. But, you can suggest some good slide show transistions, which we may try together to create.
+
+###Let’s define our key frames.
 
 First key frame is `SlideShow0`:-
 ```css
