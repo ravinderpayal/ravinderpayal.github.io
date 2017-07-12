@@ -365,7 +365,7 @@ One thing important in this code is that we have used flex-box property for arro
 
 >We can add any number of different transitions, but showing different types of transition effects is not the objective of this tutorial, and we will be doing to a separate tutorial for that. But, you can suggest some good slide show transistions, which we may try together to create.
 
-###Let’s define our key frames.
+### Let’s know about the key frames we are using here.
 
 First key frame is `SlideShow0`:-
 ```css
