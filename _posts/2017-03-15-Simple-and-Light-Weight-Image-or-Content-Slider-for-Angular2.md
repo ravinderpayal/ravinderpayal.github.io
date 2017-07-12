@@ -4,14 +4,14 @@ title: Simple and Lightweight Image or Content Slider for Angular 2 by Ravinder 
 author: ravinder_payal
 ---
 <p>
-Hi Guys, today, we are going to develop and a simple image-slider for Angular 2 with the help of CSS. Some of us will be thinking that why re-invent the wheel when libraries like JSSOR, and JQUERY carousel plugins are already available:-
+Hi friends, today, we are going to develop a simple to use image and content slider for Angular 2 with transitions and styling done using CSS. Some of us might be thinking that why re-invent the wheel when libraries like JSSOR, and plugins like JQUERY carousel are already available. So, we are re-creating it because:-
 </p>
-1.  Because there are no good native Angular 2 sliders available. Those available are too heavy, and have additional dependencies like JQUERY, which makes our project more heavy.
+1.  There are no good native Angular 2 sliders available. Those available are too heavy, and have additional dependencies like JQUERY and Bootstrap, which makes our project pointlessly more heavy.
 2.	No worries about licensing.
 3.	To get a clear understanding of how slide shows and transitions work on web pages.
-4.	Light weight solutions, because the ready to use libraries have a lot of boiler plate code.
+4.	Light weight solution, because the ready to use libraries have a lot of boiler plate code for making them work at all.
 5.	To have complete control over code.
-6.	Tell me if I missed any important plus or minus point.
+6.	Tell me if, I missed any other important point.
 
 <!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider/archive/master.zip" data-icon="octicon-cloud-download" data-style="mega" aria-label="Download ravinderpayal/Angular2-Image-OR-Content-Slider on GitHub">Download</a> <!-- Place this tag where you want the button to render. -->
