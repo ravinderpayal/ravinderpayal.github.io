@@ -17,7 +17,7 @@ Hi friends, today, we are going to develop a simple to use image and content sli
 <a class="github-button" href="https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider/archive/master.zip" data-icon="octicon-cloud-download" data-style="mega" aria-label="Download ravinderpayal/Angular2-Image-OR-Content-Slider on GitHub">Download</a> <!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider" data-icon="octicon-star" data-style="mega" data-count-href="/ravinderpayal/Angular2-Image-OR-Content-Slider/stargazers" data-count-api="/repos/ravinderpayal/Angular2-Image-OR-Content-Slider#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star ravinderpayal/Angular2-Image-OR-Content-Slider on GitHub">Star</a>
 
-If you agree, let's go ahead.
+
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
@@ -28,9 +28,13 @@ If you agree, let's go ahead.
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
+If you agree, let's go ahead.
+
 First of all we will prepare our HTML structure.
 
 ### Template
+
 ```html
 <div class="slider">
   <div class="sliderArrows">
