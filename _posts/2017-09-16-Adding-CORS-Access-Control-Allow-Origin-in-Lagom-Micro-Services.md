@@ -6,6 +6,7 @@ author: ravinder_payal
 <p>
 Hi friends, today, I came accross an interesting challenge of adding CORS in Lagom MicroServices, but didn't find anything other than few google group threads. So, after completing the challenge I thought about sharing the working solution. So let's go ahead.
 </p>
+
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
