@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adding CORS(Access-Control-Allow-Origin) in Lagom MicroServices.
+title: Adding CORS(Access-Control-Allow-Origin) in Lagom-Scala MicroServices.
 author: ravinder_payal
 ---
 <p>
