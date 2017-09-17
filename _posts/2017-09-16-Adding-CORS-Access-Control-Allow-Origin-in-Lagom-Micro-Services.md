@@ -8,15 +8,8 @@ Hi friends, today, I came accross an interesting challenge of adding CORS in Lag
 </p>
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-format="fluid"
-     data-ad-layout="in-article"
-     data-ad-client="ca-pub-3201220427379470"
-     data-ad-slot="2921542940"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
+
 Adding CORS filter in Lagom is a few steps work.
 
 For this we are going to use CORS filter provided by Play Framework as Lagom is also based on PlayFramework.(https://www.playframework.com/documentation/2.5.x/CorsFilter)
@@ -68,6 +61,7 @@ abstract class WebtrackingApplication(context: LagomApplicationContext)
 }
 ```
 >Remember to import CORSComponent class and EssentialFilter type class.
+
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-format="fluid"
