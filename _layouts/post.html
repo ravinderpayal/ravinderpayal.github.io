@@ -2,6 +2,14 @@
 layout: default
 ---
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1938120293103904";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <article class="post">
   <h1>{{ page.title }}</h1>
   <hr />
@@ -11,6 +19,12 @@ layout: default
   <b>Author</b> : <a href="{{ author.profile }}" target="_blank">@{{ author.name }}</a>
 </span>
 {% endif %}
+<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div> 
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a href="https://twitter.com/RAVINDERPAYAL?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @RAVINDERPAYAL</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+  <g:plusone></g:plusone>
+
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- in-article -->
 <ins class="adsbygoogle"
@@ -22,10 +36,17 @@ layout: default
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
   <div class="entry">
     {{ content }}
   </div>
-<ins class="adsbygoogle"
+<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div> 
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a href="https://twitter.com/RAVINDERPAYAL?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @RAVINDERPAYAL</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+  <g:plusone></g:plusone>
+  
+  <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-format="fluid"
      data-ad-layout="in-article"
