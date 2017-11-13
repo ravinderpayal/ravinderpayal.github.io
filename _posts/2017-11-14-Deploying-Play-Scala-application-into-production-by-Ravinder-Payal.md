@@ -39,11 +39,14 @@ packageSummary in Linux := "My custom package summary"
 
 packageDescription := "My longer package description"
 ```
+--------------
+
 # Step#2: Packaging
 
 ```
 [your-app] $ debian:packageBin
 ```
+--------------
 
 Now, in `project-root/target`we have `your-app.deb` which can be installed using `dpkg` command on debian/ubuntu stack.
 
@@ -51,6 +54,7 @@ Now, in `project-root/target`we have `your-app.deb` which can be installed using
 ```
 root@machine:../target/#dpkg -i your-app-SNAPSHOT-Something.deb
 ```
+-------------
 
 Packaging play-scala application for RPM(Redhat party)
 ------------------------------------------------------------------------
@@ -74,7 +78,9 @@ rpmUrl := Some("http://github.com/example/server")
 
 rpmLicense := Some("Apache v2")
 ```
-#S tep#2: Packaging
+-------
+
+# Step#2: Packaging
 ```
 [your-app] $ rpm:packageBin
 ```
