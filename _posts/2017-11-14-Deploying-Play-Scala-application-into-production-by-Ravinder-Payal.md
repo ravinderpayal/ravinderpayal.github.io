@@ -29,7 +29,7 @@ Packaging play-scala application for Debian/Ubuntu
 # Step#1: Minimal settings
 Add the following settings to your build:
 
-```sbt
+```
 lazy val root = (project in file("."))
   .enablePlugins(PlayScala, DebianPlugin)
 
@@ -125,9 +125,11 @@ And go to following section, and un-comment it for accessing the monit web inter
 
 # Step#7: Supervisor configuration
 Now go to `/etc/supervisor/conf.d/`, and add a file named `app-name-anything.conf` with following content:
+
 ```
 $_>cd /etc/supervisor/conf.d/
 ```
+-----------------------------------
 ```
 [program:app-name]
 ; remove -Dconfig.file if necessary (play will use the default application.conf)
