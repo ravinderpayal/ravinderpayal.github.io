@@ -39,7 +39,7 @@ packageSummary in Linux := "My custom package summary"
 
 packageDescription := "My longer package description"
 ```
-#Step#2: Packaging
+# Step#2: Packaging
 
 ```
 [your-app] $ debian:packageBin
@@ -47,14 +47,14 @@ packageDescription := "My longer package description"
 
 Now, in `project-root/target`we have `your-app.deb` which can be installed using `dpkg` command on debian/ubuntu stack.
 
-#Step#3: Installing the package
+# Step#3: Installing the package
 ```
 root@machine:../target/#dpkg -i your-app-SNAPSHOT-Something.deb
 ```
 
 Packaging play-scala application for RPM(Redhat party)
 ------------------------------------------------------------------------
-#Step#1: Minimal settings
+# Step#1: Minimal settings
 Add the following settings to your build:
 ```
 lazy val root = (project in file("."))
@@ -74,20 +74,20 @@ rpmUrl := Some("http://github.com/example/server")
 
 rpmLicense := Some("Apache v2")
 ```
-#Step#2: Packaging
+#S tep#2: Packaging
 ```
 [your-app] $ rpm:packageBin
 ```
 Now, in `project-root/target`we have `your-app.rpm` which can be installed using `yum` command on redhat/centos/alike stack.
 
-#Step#3: Installing the package
+# Step#3: Installing the package
 ```
 root@machine:../target/#yum install your-app-SNAPSHOT-Something.deb
 ```
 
 Now, Installation is done. But, how to make the application-server keep running whenever the host-system is running? Let's find out!
 
-#Step#4: Installing Supervisor
+# Step#4: Installing Supervisor
 ```
 apt-get install supervisor
 ```
@@ -95,7 +95,7 @@ or
 ```
 yum install supervisor
 ```
-#Step#5: Installing Monit
+# Step#5: Installing Monit
 ```
 apt-get install monit
 ```
@@ -103,7 +103,7 @@ or
 ```
 yum install monit
 ```
-#Step#6: Setting up Monit
+# Step#6: Setting up Monit
 Edit the file `/etc/monit/monitrc` using your favourite editor and add the following content.
 ```
 check process your-app  with pidfile /usr/share/your-app/RUNNING_PID
@@ -123,7 +123,7 @@ And go to following section, and un-comment it for accessing the monit web inter
 ```
 >You can check the `monit` documentation and alter the basic configuration according to your need
 
-#Step#7: Supervisor configuration
+# Step#7: Supervisor configuration
 Now go to `/etc/supervisor/conf.d/`, and add a file named `app-name-anything.conf` with following content:
 ```
 $_>cd /etc/supervisor/conf.d/
@@ -153,7 +153,7 @@ supervisor>
 ```
 
 
-#Step#8: See the whole setup working
+# Step#8: See the whole setup working
 Go to the browser and type in the address:- `http://your-server-ip:2812` and enter the username/password entered into the configuration earlier.
 
 Notes:-
