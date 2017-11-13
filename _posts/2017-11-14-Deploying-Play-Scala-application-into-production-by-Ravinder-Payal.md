@@ -3,8 +3,8 @@ layout: post
 title: Deploying Play-Scala application into production
 author: ravinder_payal
 ---
-
-I checked and searched multiple articles and posts, but nowhere complete information was available. In deploying section of official play-scala documentation, it only talks about how to package in different formats, sbt-native docs are also more focused on packaging. So, I learnt the packaging and ran the packages on a dedicated server, but came across a few tedious problem:
+<p>
+I checked and searched multiple articles and posts, but nowhere complete information was available. In deploying section of official play-scala documentation, it only talks about how to package in different formats, sbt-native docs are also more focused on packaging. So, I learnt the packaging and ran the packages on a dedicated server, but came across a few tedious problem:</p>
 1. The application was closing after a period, and was required to manually reload on the server.
 2. On every restart it was required to manually start the application server.
 3. Monitoring service health was also not easy, it was required to ssh the server and check the logs and server resource usage.
