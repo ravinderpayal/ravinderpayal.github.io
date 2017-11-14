@@ -23,10 +23,10 @@ From wikipedia:
 
 Now the point is how to? So, we start right from packaging and complete the article with application running in production with auto-reload capability on failures(of process running the server) or server death due to run time exceptions or due to memory leakage.
 
-Packaging play-scala application for Debian/Ubuntu
-------------------------------------------------------------
+# Packaging play-scala application for Debian/Ubuntu
 
-# Step#1: Minimal settings
+
+## Step#1: Minimal settings
 Add the following settings to your application's `build.sbt`:
 
 ```scala
@@ -40,22 +40,15 @@ packageSummary in Linux := "My custom package summary"
 packageDescription := "My longer package description"
 ```
 
---------------
-
-# Step#2: Packaging
-
-
+## Step#2: Packaging
 
 ```scala
 [your-app] $ debian:packageBin
 ```
 
-
---------------
-
 Now, in `project-root/target`we have `your-app.deb` which can be installed using `dpkg` command on debian/ubuntu stack.
 
-# Step#3: Installing the package
+## Step#3: Installing the package
 
 ```scala
 root@machine:../target/#dpkg -i your-app-SNAPSHOT-Something.deb
@@ -63,9 +56,9 @@ root@machine:../target/#dpkg -i your-app-SNAPSHOT-Something.deb
 
 -------------
 
-Packaging play-scala application for RPM(Redhat party)
-------------------------------------------------------------------------
-# Step#1: Minimal settings
+# Packaging play-scala application for RPM(Redhat party)
+
+## Step#1: Minimal settings
 Add the following settings to your application's `build.sbt`:
 
 ```scala
@@ -86,10 +79,7 @@ rpmUrl := Some("http://github.com/example/server")
 
 rpmLicense := Some("Apache v2")
 ```
-
--------
-
-# Step#2: Packaging
+## Step#2: Packaging
 
 ```scala
 [your-app] $ rpm:packageBin
@@ -97,7 +87,7 @@ rpmLicense := Some("Apache v2")
 
 Now, in `project-root/target`we have `your-app.rpm` which can be installed using `yum` command on redhat/centos/alike stack.
 
-# Step#3: Installing the package
+## Step#3: Installing the package
 
 ```scala
 root@machine:../target/#yum install your-app-SNAPSHOT-Something.deb
@@ -105,7 +95,7 @@ root@machine:../target/#yum install your-app-SNAPSHOT-Something.deb
 
 Now, Installation is done. But, how to make the application-server keep running whenever the host-system is running? Let's find out!
 
-# Step#4: Installing Supervisor
+## Step#4: Installing Supervisor
 
 ```bash
 apt-get install supervisor
@@ -117,7 +107,7 @@ or
 yum install supervisor
 ```
 
-# Step#5: Installing Monit
+## Step#5: Installing Monit
 
 ```bash
 apt-get install monit
@@ -129,7 +119,7 @@ or
 yum install monit
 ```
 
-# Step#6: Setting up Monit
+## Step#6: Setting up Monit
 Edit the file `/etc/monit/monitrc` using your favourite editor and add the following content.
 
 ```bash
@@ -153,14 +143,12 @@ And go to following section, and un-comment it for accessing the monit web inter
 
 >You can check the `monit` documentation and alter the basic configuration according to your need
 
-# Step#7: Supervisor configuration
+## Step#7: Supervisor configuration
 Now go to `/etc/supervisor/conf.d/`, and add a file named `app-name-anything.conf` with following content:
 
 ```bash
 $_>cd /etc/supervisor/conf.d/
 ```
-
------------------------------------
 
 ```bash
 [program:app-name]
@@ -191,19 +179,18 @@ supervisor>
 ```
 
 
-# Step#8: See the whole setup working
+## Step#8: See the whole setup working
 Go to the browser and type in the address:- `http://your-server-ip:2812` and enter the username/password entered into the configuration earlier.
 
-Notes:-
------------------------
+# Notes:-
 You can use supervisor alone also, if you don't need the advanced features of monit like mail reporting, web interface and all other.
 Type in `supervisorctl` in terminal and then enter `help` to see the all things it support. Keeping the app-server on all the time, and reload during failure can be done by supervisor alone.
+
 > One thing I noticed is that monit takes few minutes to put web-interface online, or it might be only with my installation.
 
 Thanks and Cheers Play-Scala devs. Good night!
 
-Related Links
-----------------------------
+### Related posts:
 1. https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-monit
 2. https://www.playframework.com/documentation/2.6.x/Deploying
 3. https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps
