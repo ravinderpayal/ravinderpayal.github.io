@@ -190,7 +190,7 @@ Type in `supervisorctl` in terminal and then enter `help` to see the all things 
 
 Thanks and Cheers Play-Scala devs. Good night!
 
-### Related posts:
+## Related posts:
 1. https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-monit
 2. https://www.playframework.com/documentation/2.6.x/Deploying
 3. https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps
