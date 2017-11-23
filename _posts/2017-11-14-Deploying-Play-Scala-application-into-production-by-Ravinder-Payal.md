@@ -97,32 +97,32 @@ Now, Installation is done. But, how to make the application-server keep running 
 
 ## Step#4: Installing Supervisor
 
-```bash
+```
 apt-get install supervisor
 ```
 
 or
 
-```bash
+```
 yum install supervisor
 ```
 
 ## Step#5: Installing Monit
 
-```bash
+```
 apt-get install monit
 ```
 
 or
 
-```bash
+```
 yum install monit
 ```
 
 ## Step#6: Setting up Monit
 Edit the file `/etc/monit/monitrc` using your favourite editor and add the following content.
 
-```bash
+```
 check process your-app  with pidfile /usr/share/your-app/RUNNING_PID
  start program = "/usr/bin/supervisorctl start your-app" with timeout 60 seconds
  stop program  = "/usr/bin/supervisorctl stop your-app"
@@ -133,7 +133,7 @@ check process your-app  with pidfile /usr/share/your-app/RUNNING_PID
 
 And go to following section, and un-comment it for accessing the monit web interface. Yes monit has it's own wev-server
 
-```bash
+```
 #set httpd port 2812 and
 #     use address YourServerIp  # Suggestion:only accept connection from localhost, and do ssh tunnelling for better security and preventing unauthorised access
 #     allow 0.0.0.0/0.0.0.0        # allow localhost to connect to #the server and
@@ -146,11 +146,11 @@ And go to following section, and un-comment it for accessing the monit web inter
 ## Step#7: Supervisor configuration
 Now go to `/etc/supervisor/conf.d/`, and add a file named `app-name-anything.conf` with following content:
 
-```bash
+```
 $_>cd /etc/supervisor/conf.d/
 ```
 
-```bash
+```
 [program:app-name]
 ; remove -Dconfig.file if necessary (play will use the default application.conf)
 ; change address and port if necessary or remove them to use the default values
@@ -166,7 +166,7 @@ stopwaitsecs=10
 
 Now, if supervisor is not running run it using `supervisord` command or if already running, it requires to reload the config. So, do this:-
 
-```bash
+```
 $_> supervisorctl update
 ```
 
