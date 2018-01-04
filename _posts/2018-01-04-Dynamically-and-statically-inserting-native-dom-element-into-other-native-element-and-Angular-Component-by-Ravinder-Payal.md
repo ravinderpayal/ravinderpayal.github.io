@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dynamically and statically inserting native dom element into other native elements and angular components by Ravinder Payal
+title: Dynamically and statically inserting native dom element into other native element and angular component by Ravinder Payal
 author: ravinder_payal
 ---
 <p>
