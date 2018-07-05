@@ -15,8 +15,4 @@ I have completed porjects from web based fully functional social networking serv
 <a href="mailto:{{ site.email }}/">{{ site.email }}</a> and ravinderpayal10[at]gmail.com
 
 #### Mobile
-<pre>
-[_^_]
-|mob|   +91-89-504-27034
-|<u>-ile_</u>|
-</pre>
++91-89-FIVE ZERO FOUR-27034
