@@ -1,6 +1,11 @@
+---
+layout: post
+title: An AI/Dl based General Action Machine which can learn more, and grow up
+author: ravinder_payal
+---
 
-# An AI/Dl based General Action Machine which can learn more, and grow up.
-Draft Post written by Ravinder Payal
+**Draft Post**
+
 
 ## Fundamentals:
 - ### Aim(It's hardcoded and  the machine can't get rid of this):
