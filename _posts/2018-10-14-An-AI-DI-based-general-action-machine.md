@@ -6,7 +6,7 @@ Draft Post written by Ravinder Payal
 - ### Aim(It's hardcoded and  the machine can't get rid of this):
 	- Exploring the world without hurting the space and other beings around where it's residing
 	- Using the least possible resources for doing things
-	- **thinking more about this**
+	- \*thinking more about this\*
 
 - ### Comfortabilities:
   - Learning more,
