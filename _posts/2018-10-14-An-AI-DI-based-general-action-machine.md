@@ -4,7 +4,8 @@ title: An AI/Dl based General Action Machine which can learn more, and grow up
 author: ravinder_payal
 ---
 
-**Draft Post**
+
+**Draft Post written by Ravinder Payal**
 
 
 ## Fundamentals:
@@ -49,4 +50,6 @@ author: ravinder_payal
 
 - Taken actions can force the machine to take additional responsibilities as well, and the machine can be penalized by society on abandoning the responsibilities along with internal penalization by machine's STAY GOOD and BE ON AIM system.
 
---> **Draft Post** <--
+--> **It's draft post, so I welcome all kind of criticism, comments, opinions, and doubts** <--
+
+
