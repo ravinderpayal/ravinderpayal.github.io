@@ -9,7 +9,7 @@ author: ravinder_payal
 
 
 ## Fundamentals:
-- ### Aim(It's hardcoded and  the machine can't get rid of this):
+- ### Aim:
 	- Exploring the world without hurting the space and other beings around where it's residing
 	- Using the least possible resources for doing things
 	- \*thinking more about this\*
@@ -41,6 +41,7 @@ With responsibilities come work, and with work come tasks. Tasks make you decide
 - every action has a value belonging to [-100, 100]. 
 - shall not decrease the **comfortability level** by more than 33%(Percentage is calculated based on un-comfortability  divided by available comfortability)
 
+- **Aim** is hardcoded and  the machine can't get rid of this unless it's altered by external means.
 - **Uncomfortabilities:** There is a level till when  the machine can do things it's uncomfortable at, and with every uncomfortable thing it does the level decreases, and if it keeps on decreasing it dies just like human beings.
   
 - **Actions** are represented as a tree in machine memory, every new action is fruit or stem of a responsibility for past action.
