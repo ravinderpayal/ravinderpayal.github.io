@@ -10,7 +10,7 @@ For generating the <b><a href="https://en.wikipedia.org/wiki/Transport_Layer_Sec
 `sudo certbot certonly --manual  -m youremailaddress@example.com  --agree-tos -d subdomain.example.com  --preferred-challenges dns`
 On pressing enter it'll show something like this:
 
-`
+```
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Plugins selected: Authenticator manual, Installer None
 Obtaining a new certificate
@@ -38,7 +38,7 @@ ROBJ8UCDCMV_Uc5m9oid1heU52wsgcYF1OK0-PbgQV4
 Before continuing, verify the record is deployed.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Press Enter to Continue
-`
+```
 
 Before pressing enter when asked to create TXT record under the chosen domain, do confirm the entry of TXT record using `nslookup`
 
@@ -59,7 +59,7 @@ Now, once `p12` file is generated using openssl and SSL certificates generated b
 
 `keytool -importkeystore -srckeystore keystore.p12 -srcstoretype pkcs12 -destkeystore cert.jks -deststoretype jks`
 It'll give something like this
-`
+```
 Importing keystore keystore.p12 to cert.jks...
 Enter destination keystore password:  
 Re-enter new password: 
@@ -69,7 +69,7 @@ Import command completed:  1 entries successfully imported, 0 entries failed or 
 
 Warning:
 The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore cert.jks -destkeystore cert.jks -deststoretype pkcs12".
-`
+```
 
 On pressing enter it'll ask you for <b>destination keystore password</b>, please enter any password but do remember it as we need to provide it to play framework.
 After that you need to provide the source keystore password which you entered while running the openssl command.
@@ -78,7 +78,7 @@ On successull running of all the commands in right sequence you will get the `JK
 
 Put `cert.jks` in conf directory available in root of the play project and while running the play framework provide the ssl certificatelike this:
 
-`-Dhttps.port=443 -Dplay.server.https.keyStore.path=cert.jks -Dplay.server.https.keyStore.password=your_destination_keystore_password`
+`-Dhttps.port=443 -Dplay.server.https.keyStore.path=cert.jks -Dplay.server.https.keyStore.password=your_destination_keystore_password```
 
 
 Cheers, Enjoy the additioanl security layer provided by <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS/SSL</a>.
