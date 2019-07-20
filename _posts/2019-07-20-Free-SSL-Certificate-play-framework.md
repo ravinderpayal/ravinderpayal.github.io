@@ -85,6 +85,8 @@ Put `cert.jks` in conf directory available in root of the play project and while
 
 `-Dhttps.port=443 -Dplay.server.https.keyStore.path=cert.jks -Dplay.server.https.keyStore.password=your_destination_keystore_password```
 
+><b>Note:</b> Please use same password pk12 and jks, otherwise play will won't be able to read both certificate and private key
+
 
 Cheers, Enjoy the additioanl security layer provided by <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS/SSL</a>.
 
