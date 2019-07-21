@@ -7,11 +7,13 @@ I understand that it's too simple thing but frustrates a lot when we don't have 
 
 For generating the <b><a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS/SSL</a> certficate</b> using DNS challenge
 
-`sudo certbot certonly --manual  -m youremailaddress@example.com  --agree-tos -d subdomain.example.com  --preferred-challenges dns`
+```bash
+sudo certbot certonly --manual  -m youremailaddress@example.com  --agree-tos -d subdomain.example.com  --preferred-challenges dns
+```
 
 <p>On pressing enter it'll show something like this:</p>
 
-```
+```bash
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Plugins selected: Authenticator manual, Installer None
 Obtaining a new certificate
@@ -63,7 +65,7 @@ Now, once `p12` file is generated using openssl and SSL certificates generated b
 
 <p>It'll give something like this</p>
 
-```
+```bash
 Importing keystore keystore.p12 to cert.jks...
 Enter destination keystore password:  
 Re-enter new password: 
@@ -83,9 +85,11 @@ On successull running of all the commands in right sequence you will get the `JK
 Put `cert.jks` in conf directory available in root of the play project and while running the play framework provide the ssl certificatelike this:
 </p>
 
-`-Dhttps.port=443 -Dplay.server.https.keyStore.path=cert.jks -Dplay.server.https.keyStore.password=your_destination_keystore_password```
+```bash
+-Dhttps.port=443 -Dplay.server.https.keyStore.path=cert.jks -Dplay.server.https.keyStore.password=your_destination_keystore_password
+```
 
-><b>Note:</b> Please use same password pk12 and jks, otherwise play will won't be able to read both certificate and private key
+><b>Note:</b> Please use same password for pk12 and jks, otherwise Play won't be able to read both certificate and private key.
 
 
 Cheers, Enjoy the additioanl security layer provided by <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS/SSL</a>.
