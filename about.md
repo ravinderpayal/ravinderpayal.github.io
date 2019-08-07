@@ -13,11 +13,11 @@ I have completed projects from web based fully functional social networking serv
 <p style="font-size: 28px;">
     Companies I have worked with are:
   <ul>
-    <li>- PricewaterhouseCoopers(PWC)</li>
-    <li>- Dynapt Solutions</li>
-    <li>- Ib Hubs</li>
-    <li>- Logisoft Inc.</li>
-    <li>- and independent clients from USA, UK, Australia, Southern part of India and Zambia.</li>
+    <li> PricewaterhouseCoopers(PWC)</li>
+    <li> Dynapt Solutions</li>
+    <li> Ib Hubs</li>
+    <li> Logisoft Inc.</li>
+    <li> and independent clients from USA, UK, Australia, Southern part of India and Zambia.</li>
   </ul>
 </p>
 
