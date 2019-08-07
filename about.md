@@ -30,7 +30,7 @@ I have completed projects from web based fully functional social networking serv
     <li> Dynapt Solutions</li>
     <li> Ib Hubs</li>
     <li> Logisoft Inc.</li>
-    <li> and independent clients from USA, UK, Australia, Southern part of India and Zambia.</li>
+    <li> and individual clients from USA, UK, Australia, Southern part of India and Zambia.</li>
   </ul>
 </p>
 
