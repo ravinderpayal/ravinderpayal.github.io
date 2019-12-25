@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Simple and Lightweight Image Gallery and Content Slider for Angular 2( or 4 ) by Ravinder Payal
+title: Simple and Lightweight Image Gallery and Content Slider for Angular by Ravinder Payal
 author: ravinder_payal
 ---
 <p>
-Hi friends, today, we are going to develop a simple to use image gallery and content slider component using (and for) Angular 2( or 4) with transitions and styling done using CSS. Some of us might be thinking that why re-invent the wheel when libraries like JSSOR, and plugins like JQUERY carousel are already available. So, we are re-creating it because:-
+Hi friends, today, we are going to develop a simple to use image gallery and content slider component using (and for) Angular with transitions and styling done using CSS. Some of us might be thinking that why re-invent the wheel when libraries like JSSOR, and plugins like JQUERY carousel are already available. So, we are re-creating it because:-
 </p>
 1.  There are no good native Angular 2( or 4 ) sliders available. Those available are too heavy, and have additional dependencies like JQUERY and Bootstrap, which makes our project pointlessly more heavy.
 2.	No worries about licensing.
@@ -14,8 +14,8 @@ Hi friends, today, we are going to develop a simple to use image gallery and con
 6.	Tell me if, I missed any other important point.
 
 <!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider/archive/master.zip" data-icon="octicon-cloud-download" data-style="mega" aria-label="Download ravinderpayal/Angular2-Image-OR-Content-Slider on GitHub">Download</a> <!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/ravinderpayal/Angular2-Image-OR-Content-Slider" data-icon="octicon-star" data-style="mega" data-count-href="/ravinderpayal/Angular2-Image-OR-Content-Slider/stargazers" data-count-api="/repos/ravinderpayal/Angular2-Image-OR-Content-Slider#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star ravinderpayal/Angular2-Image-OR-Content-Slider on GitHub">Star</a>
+<a class="github-button" href="https://github.com/ravinderpayal/Angular-Image-And-Content-Slider/archive/master.zip" data-icon="octicon-cloud-download" data-style="mega" aria-label="Download ravinderpayal/Angular-Image-And-Content-Slider on GitHub">Download</a> <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/ravinderpayal/Angular-Image-And-Content-Slider" data-icon="octicon-star" data-style="mega" data-count-href="/ravinderpayal/Angular-Image-And-Content-Slider/stargazers" data-count-api="/repos/ravinderpayal/Angular-Image-And-Content-Slider#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star ravinderpayal/Angular-Image-And-Content-Slider on GitHub">Star</a>
 
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
