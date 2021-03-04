@@ -13,7 +13,7 @@ sudo certbot certonly --manual  -m youremailaddress@example.com  --agree-tos -d 
 
 <p>On pressing enter it'll show something like this:</p>
 
-```sh
+```js
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Plugins selected: Authenticator manual, Installer None
 Obtaining a new certificate
