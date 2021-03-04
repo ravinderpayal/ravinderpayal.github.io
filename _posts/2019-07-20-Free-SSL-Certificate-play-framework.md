@@ -114,7 +114,6 @@ keytool -v -list -keystore cert.jks
 It will ask for the password, enter same password as you entered while doing export of Public-Key Cryptography Standards (PKCS) #12(.p12) in Java Key Store(JKS).
 If you enter wrong password, it will tell you certificate is tempered. On correct password, you will see content of certificate. Look for the subject keyword and mention of your domain name, apart from that check if the certificate authority is mentioned or not. 
 
-
 Cheers, Enjoy the additioanl security layer provided by <a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS/SSL</a>.
 
 Please do comment if you have any doubts, I will revert back within a day.
