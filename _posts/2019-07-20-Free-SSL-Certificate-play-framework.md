@@ -7,13 +7,13 @@ I understand that it's too simple thing but frustrates a lot when we don't have 
 
 For generating the <b><a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS/SSL</a> certficate</b> using DNS challenge
 
-```shell
+```sh
 sudo certbot certonly --manual  -m youremailaddress@example.com  --agree-tos -d subdomain.example.com  --preferred-challenges dns
 ```
 
 <p>On pressing enter it'll show something like this:</p>
 
-```
+```sh
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Plugins selected: Authenticator manual, Installer None
 Obtaining a new certificate
@@ -66,7 +66,7 @@ Now, once `p12` file is generated using openssl and secure sockets layer(SSL) ce
 
 <p>It'll give something like this</p>
 
-```
+```sh
 Importing keystore keystore.p12 to cert.jks...
 Enter destination keystore password:  
 Re-enter new password: 
@@ -85,7 +85,7 @@ Once all the commands are ran  successfully in right sequence you will get the J
 Put `cert.jks` in conf directory available in root of the play project and while running the play framework provide the ssl certificatelike this:
 </p>
 
-```
+```sh
 -Dhttps.port=443 -Dplay.server.https.keyStore.path=cert.jks -Dplay.server.https.keyStore.password=your_destination_keystore_password
 ```
 
@@ -94,21 +94,21 @@ Put `cert.jks` in conf directory available in root of the play project and while
 ##Converting .crt to .jks
 At times, we may encounter certificate issued to us in .crt format as well. For this as well we will need same commands along with .cert file for domain, root Certificate Authority .cert file and privatekey(stored in .pem or .key file).
 
-###Step 1
+### Step 1
 ```
 openssl pkcs12 -export -in sslcert/domain_ext.crt  -inkey sslcert/privkey.key -CAfile sslcert/ROOT_CERT_AUTHORITY.crt  -out intermediate.p12
 ```
-###Step 2
+### Step 2
 
-```
+```sh
 keytool -importkeystore -srckeystore intermediate.p12 -srcstoretype pkcs12 -destkeystore cert.jks -deststoretype jks
 ```
 And you will have the certificate in Java Key Store(JKS) format. Look for cert.jks in present working directory(pwd) of terminal.
 
-##Bonus Content
-###Command to see if exported Java Key Store is valid
+## Bonus Content
+### Command to see if exported Java Key Store is valid
 
-```
+```sh
 keytool -v -list -keystore cert.jks
 ```
 It will ask for the password, enter same password as you entered while doing export of Public-Key Cryptography Standards (PKCS) #12(.p12) in Java Key Store(JKS).
