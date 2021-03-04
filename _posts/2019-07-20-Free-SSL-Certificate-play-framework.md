@@ -7,7 +7,7 @@ I understand that it's too simple thing but frustrates a lot when we don't have 
 
 For generating the <b><a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">TLS/SSL</a> certficate</b> using DNS challenge
 
-```sh
+```js
 sudo certbot certonly --manual  -m youremailaddress@example.com  --agree-tos -d subdomain.example.com  --preferred-challenges dns
 ```
 
