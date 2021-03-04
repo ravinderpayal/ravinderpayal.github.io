@@ -91,7 +91,8 @@ Put `cert.jks` in conf directory available in root of the play project and while
 
 ><b>Note:</b> Please use same password for pk12 and jks, otherwise Play won't be able to read both certificate and private key.
 
-##Converting .crt to .jks
+## Converting .crt to .jks
+
 At times, we may encounter certificate issued to us in .crt format as well. For this as well we will need same commands along with .cert file for domain, root Certificate Authority .cert file and privatekey(stored in .pem or .key file).
 
 ### Step 1
