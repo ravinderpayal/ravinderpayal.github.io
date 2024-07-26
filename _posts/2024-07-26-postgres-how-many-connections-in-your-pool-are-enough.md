@@ -1,5 +1,3 @@
-# Postgres | How many connections in your pool are enough/justfied?
-
 - We will explore:
     - What's the cost of a connection?
         - A OS native process is an expensive construct. It requires execution of significant logistical instructions and data structures while creating as well as well scheduling for execution.
