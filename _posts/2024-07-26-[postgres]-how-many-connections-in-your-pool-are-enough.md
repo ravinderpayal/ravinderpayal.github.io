@@ -24,17 +24,17 @@ These vectors influences the decission in terms of bottlenecks they intorduces.
 
 > Fun fact:
 Practical read speed of Great Enterprise grade SSDs is below 10GB per second that is 10 bytes per nano second.
-
+>
 >Databases are often queried randomly and hence disk reads are random.
-
+>
 >Practical random read speed, for a h**igh-performance PCIe 5.0 SSD like  PM1743,** hovers around 2.5 million I/O per second
-
+>
 >Postgres writes rows in pages of size 8kb each
-
+>
 >To. read a row, postgres needs to access a full page even if it’s 1/8 of the page
-
+>
 >If a row has like ~1kb long content(1 8-byte long timestamp, 10 32bit integers for various foreign keys i.e. 40 bytes, one 100 words article i.e. 500 16bit unicode chars i.e. 1000 bytes )
-
+>
 >It would require 1 I/O operation to access the page containing the row. Targetted access is only possible if we have our query criteria indexed before hand
 > 
 
