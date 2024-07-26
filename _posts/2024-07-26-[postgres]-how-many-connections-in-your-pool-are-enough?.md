@@ -27,7 +27,7 @@ Practical read speed of Great Enterprise grade SSDs is below 10GB per second tha
 >
 >Databases are often queried randomly and hence disk reads are random.
 >
->Practical random read speed, for a h**igh-performance PCIe 5.0 SSD like  PM1743,** hovers around 2.5 million I/O per second
+>Practical random read speed, for a **high-performance PCIe 5.0 SSD like  PM1743,** hovers around 2.5 million I/O per second
 >
 >Postgres writes rows in pages of size 8kb each
 >
