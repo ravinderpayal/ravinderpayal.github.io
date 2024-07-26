@@ -25,17 +25,17 @@ These vectors influences the decission in terms of bottlenecks they intorduces.
 > Fun fact:
 Practical read speed of Great Enterprise grade SSDs is below 10GB per second that is 10 bytes per nano second.
 
-Databases are often queried randomly and hence disk reads are random.
+>Databases are often queried randomly and hence disk reads are random.
 
-Practical random read speed, for a h**igh-performance PCIe 5.0 SSD like  PM1743,** hovers around 2.5 million I/O per second
+>Practical random read speed, for a h**igh-performance PCIe 5.0 SSD like  PM1743,** hovers around 2.5 million I/O per second
 
-Postgres writes rows in pages of size 8kb each
+>Postgres writes rows in pages of size 8kb each
 
-To. read a row, postgres needs to access a full page even if it’s 1/8 of the page
+>To. read a row, postgres needs to access a full page even if it’s 1/8 of the page
 
-If a row has like ~1kb long content(1 8-byte long timestamp, 10 32bit integers for various foreign keys i.e. 40 bytes, one 100 words article i.e. 500 16bit unicode chars i.e. 1000 bytes )
+>If a row has like ~1kb long content(1 8-byte long timestamp, 10 32bit integers for various foreign keys i.e. 40 bytes, one 100 words article i.e. 500 16bit unicode chars i.e. 1000 bytes )
 
-It would require 1 I/O operation to access the page containing the row. Targetted access is only possible if we have our query criteria indexed before hand
+>It would require 1 I/O operation to access the page containing the row. Targetted access is only possible if we have our query criteria indexed before hand
 > 
 
 If you query requires loading one row with a text field with 100 ascii characters and 5 32-bit integers, we are talking about 100bytes + 160bytes plus some metadata about who is who and where, roughly translating into let's say half KB or  ~512 bytes
@@ -102,23 +102,23 @@ Okay, so here’re few approaches:
         We have total latency of: ~2.5ms
         
     12. Let’s guesstimate how much time(in micro seconds) it takes to run an sql query end to end:
-        1. Send Query Over Network: Network | ~200
-        2. Query parsing and syntax checking: CPU+RAM| Use from cache in case of prepared statements | ~1
-        3. Admin work(Authentication/authorization): CPU+RAM | ~50
-        4. Query analysis and rewriting: CPU+RAM | Use from cache in case of prepared statements | ~1
-        5. Query planning and optimization: CPU+RAM |  Depends on `plan_cache_mode` if set force_generic_plan ~10 else if auto ~50 else if force_custom_plan ~100
-        6. Executor initialization: CPU+RAM | ~50
-        7. Index selection and access: CPU+RAM | Assuming 20% of the indexes needs to be loaded from disk | ~100
+        1. Send Query Over Network: Network --- ~200
+        2. Query parsing and syntax checking: CPU+RAM (Use from cache in case of prepared statements) --- ~1
+        3. Admin work(Authentication/authorization): CPU+RAM --- ~50
+        4. Query analysis and rewriting: CPU+RAM (Use from cache in case of prepared statements) --- ~1
+        5. Query planning and optimization: CPU+RAM (Depends on `plan_cache_mode` if set force_generic_plan ~10 else if auto ~50 else if force_custom_plan ~100) --- ~50
+        6. Executor initialization: CPU+RAM --- ~50
+        7. Index selection and access: CPU+RAM (Assuming 20% of the indexes needs to be loaded from disk) --- ~100
         8. Data retrieval:
-            1. Buffer cache check: CPU+RAM | Let’s say available 10% of the time | ~10
-            2. Disk I/O (if data not in cache): DISK | 90% of time |
+            1. Buffer cache check: CPU+RAM (Let’s say available 10% of the time) --- ~10
+            2. Disk I/O (if data not in cache): DISK (90% of time)
                 1. Disk ~72*0.9  → ~ 63 when disk is idle
                 2. If connection processes are competing for disk access, the latency would atleast quadruple
                 3. so it would be ~250 micro-seconds
-                4. Kernel↔User space interaction—sys call etc, buffer sharing —> ~20
-        9. Cast/Filter/Union data as per query: CPU+RAM | ~50
-        10. Collect result over network: NETWORK | ~200
-        11. Application not releasing the connection during intermediate steps b/w sql queries| IDLE | ~5-50
+                4. Kernel↔User space interaction—sys call etc, buffer sharing --- ~20
+        9. Cast/Filter/Union data as per query: CPU+RAM --- ~50
+        10. Collect result over network: NETWORK --- ~200
+        11. Application not releasing the connection during intermediate steps b/w sql queries: IDLE --- ~5-50
             1. application should better release the connection if it’s doing some rpc or network call like http etc
     13. Guestimate totals to 1000 micro-seconds, round off to 1.5ms(assuming I missed something)
     14. While executing a query, CPU is idle for >750micro-seconds or >50% of the time(just waiting for the IO to happen)
