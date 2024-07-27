@@ -4,8 +4,12 @@
     - What vectors influences the decission of figuring out how many connections(bellpark) would be optimal?
     - How to come up with the right number of connections?
         - The connections are mostly hard conigured via env variable or some other configuration injection mechanism during the startup of the application/service, meaning  we are supposed to figure out the adequate number of connections before deployment.
+        - Few applications have dynamic connection pool manager as well
+            - It adjusts the connection count as per connection count as well as change in query pattern
+            - Writes are disk heavy operation, this influences the number of connections we should have
+            - Reads can be optimised to not even touch the disk
 
-- The vector which principally influences the number of connections decission are(in declining order):
+- The vectors which principally influences the number of connections decission are(in declining order):
     - Available CPU cores
     - Available RAM
     - Your DISK I/O Speed
